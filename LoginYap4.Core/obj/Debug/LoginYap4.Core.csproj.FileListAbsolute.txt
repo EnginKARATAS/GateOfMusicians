@@ -1,0 +1,6 @@
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Core\bin\Debug\LoginYap4.Core.dll
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Core\bin\Debug\LoginYap4.Core.pdb
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Core\obj\Debug\LoginYap4.Core.csprojAssemblyReference.cache
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Core\obj\Debug\LoginYap4.Core.csproj.CoreCompileInputs.cache
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Core\obj\Debug\LoginYap4.Core.dll
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Core\obj\Debug\LoginYap4.Core.pdb

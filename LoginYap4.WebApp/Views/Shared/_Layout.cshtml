@@ -1,0 +1,134 @@
+﻿@using LoginYap4.WebApp
+@using LoginYap4.Entities
+@using LoginYap4.WebApp.Models
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gate Of Musicians - Friendship - Chord All Ensturments">
+    <meta name="author" content="Engin Karataş">
+
+    <title>GateOfMusicians - Social Musicians Site</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- Button trigger modal -->
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <!-- Central Modal Small -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/Home/Index">Gate Of Musicians</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                @if (CurrentSession.User != null)
+                {
+                    <div class="dropdown show">
+                        <a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Song Manages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li>@Bootstrap.LinkMenu("/Note/Creater", "plus", " Add Song")</li>
+                            <li>@Bootstrap.LinkMenu("/Note/Index", "th-list", " My Songs")</li>
+                            <li>@Bootstrap.LinkMenu("/Note/MyLikedSongs", "heart", " Liked Songs")</li>
+                            @* adminse ifi açmalı *@
+                            @if (CurrentSession.User.IsAdmin)
+                            {
+                                <hr />
+                                <li>@Bootstrap.LinkMenu("/Category/Create", "plus", " Add Category ")</li>
+                                <li>@Bootstrap.LinkMenu("/Category/Index", "th-list", " Categories")</li>
+                                <hr />
+                                <li>@Bootstrap.LinkMenu("/Siteuser/Create", "plus", " Kullanıcı Ekle")</li>
+                                <li>@Bootstrap.LinkMenu("/Siteuser/Index", "th-list", " Kullanıcılar")</li>
+                            }
+                        </div>
+
+                    </div>
+                }
+                <ul class="navbar-nav ml-auto">
+
+                    <li>
+                    <li class="nav-item  ">
+                        @Bootstrap.LinkMenu2("/Home/MostLiked", "home", "Anasayfa")
+                    </li>
+                    <li class="nav-item">
+                        @Bootstrap.LinkMenu2("/Home/MostLiked", "star", " Most Liked")
+                    </li>
+                    <li class="nav-item">
+                        @Bootstrap.LinkMenu2("/Home/Index", "th-list", " Last Songs")
+                    </li>
+                    <li class="nav-item">
+                        @Bootstrap.LinkMenu2("/Home/About", "address-card", "About")
+                    </li>
+                    @if (CurrentSession.User == null)
+                    {
+                        <li>
+                            @Bootstrap.LinkMenu2("/Home/Login", "sign-in-alt", "Login")
+                        </li>
+                        <li>
+                            @Bootstrap.LinkMenu2("/Home/Register", "user", " Register!")
+                        </li>
+                    }
+                    else
+                    {
+                        <!-- Small button group -->
+                        <div class="btn-group">
+                            <button class="btn btn-danger btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                @(CurrentSession.User.Name+" "+CurrentSession.User.Surname)
+                            </button>
+                            <div class="dropdown-menu">
+                                @Bootstrap.DropDownSag("/Home/ShowProfile", "user", "Show Profile")
+                                @Bootstrap.DropDownSag("/Home/EditProfile", "edit", "Edit Profile")
+                                <li>
+                                    <a href="/Home/DeleteProfile" onclick="return confirm('Hesabınızı silmek istediğinize emin misiniz?');">
+                                        <span class="fa fa-trash"></span> Delete My Profile
+                                    </a>
+                                </li>
+                            </div>
+                        </div>
+                    }
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid body-content">
+        <br />
+        @RenderBody()
+
+    </div>
+    <br /><br /><br />
+    <!-- Footer -->
+    @RenderSection("footer", required: false)@*. required parametresi false kullanmak zorunlu değil. kullanmak istediğimiz sayfalar mesela indexe bak sectionu çağırıyoruz *@
+
+</body>
+
+</html>

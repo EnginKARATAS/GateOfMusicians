@@ -1,0 +1,30 @@
+﻿@using LoginYap4.WebApp 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-6">
+            @Html.TextBox("field", "seçilen değerin valusunu girin")@*kullanıcı satır seçecek. seçtiği satırın Id si gelecek*@
+
+        </div>
+
+
+        <div class="col-md-6">
+            @if (CurrentSession)
+            {
+            @Html.Partial("_PartialSongText")
+            }
+        </div>
+    </div>
+</body>
+</html>
+

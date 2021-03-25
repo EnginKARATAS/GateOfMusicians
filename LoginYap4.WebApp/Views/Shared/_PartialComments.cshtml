@@ -1,0 +1,51 @@
+﻿@using LoginYap4.Entities
+@using LoginYap4.WebApp.Models
+@model List<Comment>
+
+@{
+    SiteUser user = CurrentSession.User;  //sisteme login olmuş kullanıcıyı verir.//yoksa null
+}
+
+@foreach (var item in Model)
+{
+    <div class="media pt-5">
+        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
+        <div class="media-body">
+            <h5 class="mt-0 font-weight-bold"><i class="fa fa-user"></i>@(item.Owner.Name + " " +item.Owner.Surname)</h5>
+
+            <span class="float-right">
+            </span>
+
+            <span class="col-md-10" id="comment_text_@item.Id" contenteditable="false">
+                @item.Text
+            </span>
+
+            @if (user != null && user.Id == item.Owner.Id)
+            {
+                <span class="col-md-2 text-right">
+                    <button type="button" class="btn btn-warning btn-xs" data-edit-mode="false" onclick="doComment(this,'edit_clicked',@item.Id,'#comment_text_@item.Id');">
+                        <span class="fa fa-edit"></span>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-xs" onclick="doComment(this,'delete_clicked',@item.Id);">
+                        <span class="fa fa-trash"></span>
+                    </button>
+                </span>
+            }
+
+        </div>
+
+    </div>
+}                                  
+ @*<small>
+        <button type="button" class="btn btn-warning btn-sm" data-edit-mode="false" onclick="
+        doComment(this, 'edit_clicked', @item.Id, '#comment_text_@item.Id')">
+            <i class="fas fa-edit"></i>
+        </button>
+        <button type="button" class="btn btn-danger btn-sm">
+            <i class="fa fa-trash"></i>
+        </button>
+        <div class="text-right">
+            <i class="fa fa-clock"> </i> @item.ModifiedOn.ToString("MM/dd/yyyy HH:mm") &nbsp;&nbsp;&nbsp;&nbsp;
+
+        </div>
+    </small>*@

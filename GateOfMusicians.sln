@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginYap4.Entities", "LoginYap4.Entities\LoginYap4.Entities.csproj", "{730407EC-51BB-4857-8A5A-51B831DEDD3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginYap4.DataAccessLayer", "LoginYap4.DataAccessLayer\LoginYap4.DataAccessLayer.csproj", "{69C1BFDD-6CB1-4547-B96A-206FD291F406}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginYap4.BusinessLayer", "LoginYap4.BusinessLayer\LoginYap4.BusinessLayer.csproj", "{200D50A9-B416-427C-8118-262480D07C85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginYap4.WebApp", "LoginYap4.WebApp\LoginYap4.WebApp.csproj", "{DAD555D0-0E41-46F4-B10F-D357A10F5611}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginYap4.Core", "LoginYap4.Core\LoginYap4.Core.csproj", "{BC110255-9ED0-4031-90CD-5C609E777C47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginYap4.Common", "LoginYap4.Common\LoginYap4.Common.csproj", "{3DD93367-D999-4EDF-9F63-D0D48868A5B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{730407EC-51BB-4857-8A5A-51B831DEDD3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{730407EC-51BB-4857-8A5A-51B831DEDD3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{730407EC-51BB-4857-8A5A-51B831DEDD3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{730407EC-51BB-4857-8A5A-51B831DEDD3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69C1BFDD-6CB1-4547-B96A-206FD291F406}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C1BFDD-6CB1-4547-B96A-206FD291F406}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C1BFDD-6CB1-4547-B96A-206FD291F406}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C1BFDD-6CB1-4547-B96A-206FD291F406}.Release|Any CPU.Build.0 = Release|Any CPU
+		{200D50A9-B416-427C-8118-262480D07C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{200D50A9-B416-427C-8118-262480D07C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{200D50A9-B416-427C-8118-262480D07C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{200D50A9-B416-427C-8118-262480D07C85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAD555D0-0E41-46F4-B10F-D357A10F5611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD555D0-0E41-46F4-B10F-D357A10F5611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD555D0-0E41-46F4-B10F-D357A10F5611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD555D0-0E41-46F4-B10F-D357A10F5611}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC110255-9ED0-4031-90CD-5C609E777C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC110255-9ED0-4031-90CD-5C609E777C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC110255-9ED0-4031-90CD-5C609E777C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC110255-9ED0-4031-90CD-5C609E777C47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DD93367-D999-4EDF-9F63-D0D48868A5B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DD93367-D999-4EDF-9F63-D0D48868A5B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DD93367-D999-4EDF-9F63-D0D48868A5B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DD93367-D999-4EDF-9F63-D0D48868A5B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E14EE25F-F303-4153-B94F-2630C5EF89B2}
+	EndGlobalSection
+EndGlobal

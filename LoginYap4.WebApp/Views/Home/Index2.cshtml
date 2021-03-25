@@ -1,0 +1,49 @@
+﻿@model LoginYap4.WebApp.Models.ViewModel
+@{
+    ViewBag.Title = "SQL SERVER BAĞLANTI DENEMELERİ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="row">
+    <div class="col-md-3">
+    </div>
+    <h5>Index2 (SQL SERVER BAĞLANTI DENEMELERİ)</h5>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+
+    </div>
+        @foreach (var item in @Model.procedureGetUserInfo)
+        {
+
+            <table class="table table-striped">
+
+                <th>Name</th>
+                <th>Surname</th>
+                <th>UsernameName</th>
+                <tr>
+                    <td>
+                        @item.Name;
+
+                    </td>
+                    <td>
+                        @item.Surname;
+
+                    </td>
+                    <td>
+                        @item.Username
+
+                    </td>
+                </tr>
+
+            </table>
+        }
+</div><div class="row">
+    <div class="col-md-4">
+
+    </div>
+        <h3>Fonksyondan Gelen Şarkı Sayısı:<strong>@Model.sqlFonksyonKisiSayisi[0].SarkiSayisi</strong> </h3>
+</div>

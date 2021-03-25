@@ -1,0 +1,19 @@
+﻿@using LoginYap4.WebApp.Models
+@using LoginYap4.Entities
+
+@{
+    List<Category> list = CacheHelper.GetCategoriesFromCache();
+}
+
+<div class="col-lg-3">
+
+    <h3 class="my-3 text-dark"><strong>Categories</strong></h3>
+    <div class="list-group">
+        @foreach (var kategori in list)
+        {
+            <a href="/Home/ByCategory/@kategori.Id" title="@kategori.Description" class="h6 text-secondary font-weight-bolder list-group-item"><i class="fas fa-dungeon"></i>  @kategori.Title</a>
+        }
+    </div>
+
+</div>
+

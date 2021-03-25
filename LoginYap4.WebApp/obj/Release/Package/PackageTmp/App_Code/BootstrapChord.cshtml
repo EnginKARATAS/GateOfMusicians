@@ -1,0 +1,23 @@
+﻿
+@helper Chord(string[] chords, int arrange = 4)
+{
+    int len = chords.Length;
+
+    <span class="text-danger">@chords[0]</span>
+    for (int i = 1; i < len; i++)
+    {
+        for (int j = 0; j < arrange; j++)
+        {
+            <span>&emsp;</span>
+        }
+        <span class="text-danger">@chords[i]</span>
+        if (i == len)
+        {
+            <span class="text-danger">@chords[len - 1]</span>
+            return;
+        }
+
+
+    }
+
+}

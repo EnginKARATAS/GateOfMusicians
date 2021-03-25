@@ -1,0 +1,15 @@
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Common\bin\Debug\LoginYap4.Common.dll
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Common\bin\Debug\LoginYap4.Common.pdb
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Common\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Common\bin\Debug\System.Security.AccessControl.dll
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Common\bin\Debug\System.Security.Permissions.dll
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Common\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Common\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Common\bin\Debug\System.Security.AccessControl.xml
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Common\bin\Debug\System.Security.Permissions.xml
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Common\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Common\obj\Debug\LoginYap4.Common.csprojAssemblyReference.cache
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Common\obj\Debug\LoginYap4.Common.csproj.CoreCompileInputs.cache
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Common\obj\Debug\LoginYap4.Common.csproj.CopyComplete
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Common\obj\Debug\LoginYap4.Common.dll
+C:\Users\sona\source\repos\MVC\GateOfMusician\LoginYap4.Common\obj\Debug\LoginYap4.Common.pdb

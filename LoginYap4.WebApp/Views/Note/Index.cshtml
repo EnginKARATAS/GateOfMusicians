@@ -1,0 +1,115 @@
+﻿@model IEnumerable<LoginYap4.Entities.Song>
+
+@{
+    ViewBag.Title = "My Song Contributes";
+}
+
+<div class="col-md-2"></div>
+
+<div class="row">
+
+    <div class="col-md-12  ">
+        <h2>
+            <b>
+                @ViewBag.Title
+            </b>
+        </h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12  ">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Category.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Text)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsDraft)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LikeCount)
+                </th>
+                <th></th>
+            </tr>
+            @*//string text = @Html.Raw(item.Text).ToString();
+            //string text2 = @Html.Raw(item.Text2).ToString();
+
+            //string tex = text.Substring(0, 340);
+            //string tex2 = text2.Substring(0, 340);*@
+            @foreach (var item in Model)
+            {
+                <div class="bg-danger" data-song-id="@item.Id">
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Category.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+
+
+
+                            <b>
+                                @item.TextSalt
+                                ...
+                            </b>
+                            <div data-song-id="@item.Id" width="150">
+                                <button type="button" style="margin:0;" class="btn btn-success btn-xs" data-toggle="modal" data-target="#commentModalSm" data-song-id="@item.Id">
+                                    <span class="fa fa-comment"></span>
+                                </button>
+
+                                @Bootstrap.LinkButton("/Note/Edit/" + item.Id, "warning", "btn-xs", "Düzenle", "edit", string.Empty)
+
+                                @Bootstrap.LinkButton("/Note/Details/" + item.Id, "info", "btn-xs", "Detaylar", "search", string.Empty)
+
+                                @Bootstrap.LinkButton("/Note/Delete/" + item.Id, "danger", "btn-xs", "Kaldır", "trash", string.Empty)
+                            </div>
+
+
+
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IsDraft)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LikeCount)
+                        </td>
+
+
+                    </tr>
+
+                </div>
+
+            }
+
+        </table>
+
+    </div>
+
+</div>
+
+
+
+@Bootstrap.ModalComment(id: "commentModalSm", title: "Comments") @* data-target="#commentModalSm"*@
+
+<script src="~/Scripts/comment.js"></script>
+<script>
+
+    $(function () {
+
+
+        $('#commentModalSm').on('show.bs.modal', function (e) {    @*ilgili iddeki modele tıklandığında *@
+            var btn = $(e.relatedTarget); @* o anki tıklanan songun commentini relatedtarget ile yakalıyoruz.relatedid, show.bs.modal içinde gelen bir prop *@
+            var songid = btn.data("song-id"); @* bir elementin data - sini okuyorsak data()kullanılır.aldığı parametre, hangi data değerini istiyorsak yazılır.biz data - song - id yi istiyoruz *@
+            $("#commentModalSm_body").load("/Comment/ShowSongComments/" + songid);
+        })
+    });
+
+</script>

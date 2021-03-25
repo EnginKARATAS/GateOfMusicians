@@ -1,0 +1,94 @@
+﻿@using LoginYap4.Entities
+@model Song
+
+<div class="modal-header">
+    <div>
+        <div>
+            <i class="h2 fas fa-id-badge text-info"></i>
+            <span class="h2">
+                @Model.Artist
+                <br />
+                @Model.PublishedDate.ToString("y")
+
+            </span>
+        </div>
+        <div>
+            <i class="h5 fas fa-dungeon text-secondary"></i>
+            <span class="h6 text-secondary w-100" id="myModalLabel">Category : @Model.Category.Title</span>
+        </div>
+    </div>
+    <div class="float-right">
+        <div>
+
+            <a class="px-2 fa-lg li-ic"><i class="fab fa-youtube"></i></a>
+            Youtube
+            <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
+            Twitter
+            <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
+            Facebook
+        </div>
+        <div>
+            <h1>@Model.Name</h1>
+        </div>
+    </div>
+</div>
+
+<div>
+    <br />
+    <div class="row">
+        @{
+            if (string.IsNullOrEmpty(Model.Text) == false && string.IsNullOrEmpty(Model.Text2) == false)
+            {
+                <div class="col-md-1">
+
+                </div>
+                <div class="col-md-5">
+                    <p>
+                        @Html.Raw(Model.Text)
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <p>
+                        @Html.Raw(Model.Text2)
+                    </p>
+                </div>
+            }
+            else if (string.IsNullOrEmpty(Model.Text) == true && string.IsNullOrEmpty(Model.Text2) == false)
+            {
+
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <p>
+                        @Html.Raw(Model.Text2)
+                    </p>
+                </div>
+            }
+            else if (string.IsNullOrEmpty(Model.Text) == false && string.IsNullOrEmpty(Model.Text2) == true)
+            {
+
+                    <div class="col-md-4"></div>
+
+                    <div class="col-md-6">
+                        <p>
+                            @Html.Raw(Model.Text)
+                        </p>
+                    </div>
+
+            }
+            else if (string.IsNullOrEmpty(Model.Text) == true && string.IsNullOrEmpty(Model.Text2) == true)
+            {
+                <div cla    ss="container">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-12">
+                        <p>
+                            No Song Context
+                        </p>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            }
+        }
+
+
+    </div>
+</div>
