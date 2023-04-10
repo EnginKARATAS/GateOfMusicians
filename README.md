@@ -1,3 +1,10 @@
+
+Musician Social Media Site | C# Mvc Entity Framework MsSql CkEditor June 2021
+• Facilitated easy chord reading for musicians
+• Implemented login and comment systems
+• Developed editable musician profiles and dynamic categories
+• Designed admin and user song management
+
 # GateOfMusicians
 a musician site mvc5. I wrote this codes synchronusly with murat maseren courses. I change some codes to my like. it takes 1-2 week. I better understand the mvc5 technologie. you can see the site in enginkaratas.com. you can follow your chords with this site when you play music with any of music instrument. With that, you can make comment to music page. You can add new song to site. You have profile. you can change your profile
 See full documentation: 👉here
