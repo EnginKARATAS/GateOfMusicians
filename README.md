@@ -1,3 +1,79 @@
+# Creating a Musician Web Site using ASP.NET MVC CodeFirst Entity Framework
+
+Typescript Getting Started with [ASP.NET](http://asp.net/) MVC
+
+Are you ready to explore Typescript with [ASP.NET](http://asp.net/) MVC? This powerful combination can help you create responsive, interactive, and scalable web applications with ease. In this blog post, we'll take you through the steps to get started with Typescript and MVC, from installation to creating your first web application. Let's dive in!
+
+Installation and Setup
+
+To get started with Typescript, you'll need to have Node.js installed on your machine. Once you have that, you can install Typescript globally using the following command:
+
+npm install -g typescript
+
+Next, let's create a new [ASP.NET](http://asp.net/) MVC project in Visual Studio. Once the project is created, let's add a Typescript file to our project. Right-click on the project in Solution Explorer and select Add > New Item. From the dialog box, select TypeScript File and name it "app.ts".
+
+Writing Typescript Code
+
+Now that we have a Typescript file, let's write some code. First, let's declare a variable and assign it a value:
+
+var message: string = "Hello World";
+console.log(message);
+
+Next, let's create a class and use it in our code:
+
+class Greeter {
+greeting: string;
+constructor(message: string) {
+this.greeting = message;
+}
+greet() {
+return "Hello, " + this.greeting;
+}
+}
+let greeter = new Greeter("world");
+console.log(greeter.greet());
+
+Compiling and Running the Code
+
+To compile the Typescript code, you can use the following command:
+
+tsc app.ts
+
+This will create a JavaScript file named "app.js" in the same directory as the Typescript file. You can run the code using Node.js by running the following command:
+
+node app.js
+
+Congratulations, you've just created your first Typescript program! Now let's take a look at how we can use Typescript in an [ASP.NET](http://asp.net/) MVC application.
+
+Creating an [ASP.NET](http://asp.net/) MVC Application with Typescript
+
+To create an [ASP.NET](http://asp.net/) MVC application with Typescript, we'll use Visual Studio's built-in templates. Open Visual Studio and select File > New > Project. From the New Project dialog box, select [ASP.NET](http://asp.net/) Web Application and name it "TypescriptMVC".
+
+Next, let's add a Typescript file to our project. Right-click on the project in Solution Explorer and select Add > New Item. From the dialog box, select TypeScript File and name it "app.ts".
+
+Now let's write some code in our Typescript file:
+
+class Greeter {
+greeting: string;
+constructor(message: string) {
+this.greeting = message;
+}
+greet() {
+return "Hello, " + this.greeting;
+}
+}
+let greeter = new Greeter("world");
+console.log(greeter.greet());
+
+In order to use this Typescript code in our [ASP.NET](http://asp.net/) MVC application, we'll need to compile it into JavaScript. To do this, we'll need to modify our project's build settings. Right-click on the project in Solution Explorer and select Properties. In the Properties dialog box, select TypeScript Build and set the "Compile on Save" option to true.
+
+Now, every time you save your Typescript file, it will be automatically compiled into JavaScript. To include the compiled JavaScript file in your web page, you can use the following code:
+
+<script src="~/Scripts/app.js"></script>
+
+Conclusion
+
+In this blog post, we've covered the basics of getting started with Typescript and [ASP.NET](http://asp.net/) MVC. We've looked at installation and setup, writing Typescript code, compiling and running the code, and creating an [ASP.NET](http://asp.net/) MVC application with Typescript. We hope this has been helpful in getting you
 
 Musician Social Media Site | C# Mvc Entity Framework MsSql CkEditor June 2021 <br>
   • Facilitated easy chord reading for musicians<br>
